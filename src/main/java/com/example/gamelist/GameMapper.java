@@ -8,6 +8,6 @@ import java.util.List;
 @org.apache.ibatis.annotations.Mapper
 public interface GameMapper {
 
-    @Select("SELECT * FROM gamelists")
+    @Select("SELECT * FROM game lists")
     List<Name> findAll();
 }
