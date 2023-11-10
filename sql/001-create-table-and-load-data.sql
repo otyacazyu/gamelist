@@ -10,4 +10,3 @@ INSERT INTO gamelists (id, gamelist) VALUES (1, "ファイナル　ファンタ�
 INSERT INTO gamelists (id, gamelist) VALUES (2, "テイルズ　オブ　ファンタジア");
 INSERT INTO gamelists (id, gamelist) VALUES (3, "ストリートファイター６");
 INSERT INTO gamelists (id, gamelist) VALUES (4, "ペルソナ５");
-docker images
