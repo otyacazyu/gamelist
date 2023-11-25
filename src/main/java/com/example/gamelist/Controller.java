@@ -1,5 +1,7 @@
 package com.example.gamelist;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -21,10 +23,12 @@ public class Controller {
     public  List<GameName> gamelist(){
         return gameMapper.findAll();
     }
+
+
     @PostMapping("/gamelist")
-    public ResponseEntity<String> create(@RequestBody GameName form){
+    public ResponseEntity<String> create(@RequestBody GameFrom form){
         URI url = UriComponentsBuilder.fromUriString("http://localhost:8080")
-                .path("/gamelist")
+                .path("/gamelist/id")
                 .build()
                 .toUri();
         return ResponseEntity.ok("name successfully created");
