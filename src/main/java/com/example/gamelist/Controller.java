@@ -10,7 +10,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/controller")
+
 public class Controller {
 
     private final GameMapper gameMapper;
@@ -26,7 +26,7 @@ public class Controller {
 
 
     @PostMapping("/gamelist")
-    public ResponseEntity<String> create(@RequestBody GameFrom form){
+    public ResponseEntity<String> create(@RequestBody GameForm form){
         URI url = UriComponentsBuilder.fromUriString("http://localhost:8080")
                 .path("/gamelist/id")
                 .build()
