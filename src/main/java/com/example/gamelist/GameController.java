@@ -10,12 +10,11 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-
-public class Controller {
+public class GameController {
 
     private final GameMapper gameMapper;
 
-    public Controller (GameMapper gameMapper) {
+    public GameController(GameMapper gameMapper) {
         this.gameMapper = gameMapper;
     }
 
