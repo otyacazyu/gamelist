@@ -30,7 +30,7 @@ public class GameController {
                 .path("/gamelist/id")
                 .build()
                 .toUri();
-        return ResponseEntity.ok("name successfully created");
+        return ResponseEntity.created(url).body(new Response("name successfully created");
 
     }
 }
