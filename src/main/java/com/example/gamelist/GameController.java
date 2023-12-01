@@ -19,7 +19,7 @@ public class GameController {
     }
 
     @GetMapping("/gamelist")
-    public  List<Name> gamelist(){
+    public  List<Game> gamelist(){
         return gameMapper.findAll();
     }
 
@@ -31,5 +31,6 @@ public class GameController {
                 .build()
                 .toUri();
         return ResponseEntity.ok("name successfully created");
+
     }
 }
