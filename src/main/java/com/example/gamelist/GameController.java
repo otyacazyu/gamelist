@@ -19,7 +19,7 @@ public class GameController {
     }
 
     @GetMapping("/gamelist")
-    public  List<GameName> gamelist(){
+    public  List<Name> gamelist(){
         return gameMapper.findAll();
     }
 

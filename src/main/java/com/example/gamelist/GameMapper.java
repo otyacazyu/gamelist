@@ -9,5 +9,5 @@ import java.util.List;
 public interface GameMapper {
 
     @Select("SELECT * FROM gamelists")
-    List<GameName> findAll();
+    List<Name> findAll();
 }
