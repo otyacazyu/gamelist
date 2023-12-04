@@ -25,12 +25,12 @@ public class GameController {
 
 
     @PostMapping("/gamelist")
-    public ResponseEntity<String> create(@RequestBody GameForm form){
+    public ResponseEntity<Response> create(@RequestBody GameForm form){
         URI url = UriComponentsBuilder.fromUriString("http://localhost:8080")
                 .path("/gamelist/id")
                 .build()
                 .toUri();
-        return ResponseEntity.ok("name successfully created");
+        return ResponseEntity.created(url).body(new Response("name successfully created"));
 
     }
 }
