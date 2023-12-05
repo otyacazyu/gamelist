@@ -7,7 +7,7 @@ public class gamelistService {
 
     private final GameMapper gameMapper;
 
-    public  GamelistService(GameMapper gameMapper){
+    public gamelistService(GameMapper gameMapper) {
         this.gameMapper = gameMapper;
     }
 
