@@ -1,5 +1,8 @@
 package com.example.gamelist;
 
+import Mapper.GameMapper;
+import Request.UpdateRequest;
+import Response.Response;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
@@ -33,9 +36,9 @@ public class GameController {
         return ResponseEntity.created(url).body(new Response("name successfully created"));
 
     }
-    @PatchMapping("/gamelist")
+    @PatchMapping("/gamelist/{id}")
     public ResponseEntity<UpdateResponse> UpdateGamelist(@PathVariable int id, @RequestBody UpdateRequest updateRequest){
-         gamelistService.update(id,updateRequest.getName());
+         GamelistService.update(id,updateRequest.getName());
          UpdateResponse updataResponse = new UpdateResponse("Contents have been updated!");
          return ResponseEntity.ok(updataResponse);
 

@@ -1,4 +1,4 @@
-package com.example.gamelist;
+package Response;
 
 public class Response {
 

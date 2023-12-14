@@ -1,4 +1,4 @@
-package com.example.gamelist;
+package Response;
 
 public class UpdateResponse {
 
@@ -10,5 +10,9 @@ public class UpdateResponse {
 
     public String getMassage() {
         return massage;
+    }
+
+    public void setMassage(String massage) {
+        this.massage = massage;
     }
 }
