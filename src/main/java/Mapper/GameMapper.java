@@ -14,13 +14,13 @@ import static javax.swing.text.html.parser.DTDConstants.ID;
 @Mapper
 public interface GameMapper {
 
+    //データを一括で取得する。　GET
     @Select("SELECT * FROM gamelists")
     List<Game> findAll();
 
-    Optional<Object> findById(int id);
+    @Select("SELECT * FROM gamelists WHERE id = #{id}")
+    Optional<Game> findById(int id);
 
-    Object findByNameExceptId(String name, int id);
-
-    @Update(UPDATE gamelist SET name = WHERE ID = #{id})
+    @Update(UPDATE gamelist SET name = {#name} WHERE id = #{id})
     void updateGamelist(Gamelist gamelist);
 }

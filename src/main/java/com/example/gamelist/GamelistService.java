@@ -1,10 +1,9 @@
 package com.example.gamelist;
 
 import Mapper.GameMapper;
-import Request.UpdateRequest;
 import org.springframework.stereotype.Service;
 
-import static Request.UpdateRequest.name;
+import static com.example.gamelist.GamelistService.UpdateRequest.name;
 
 @Service
 public class GamelistService {
@@ -16,15 +15,14 @@ public class GamelistService {
         this.gameMapper = gameMapper;
     }
 
-    public  <Gamelist> updateGamelist(final Integer id) {
+    public <Gamelist> updateGamelist(final Integer id) {
         Gamelist gamelist = gameMapper.findById(id)
                 .orElseThrow(() -> new GameNotFoundException("gamelist information not found"));
-        boolean isName = this.gameMapper.findByNameExceptId(name,id).isGamelist();
-        if(UpdateRequest.getName() != null){
+        boolean isName = this.gameMapper.findByNameExceptId(name, id).isGamelist();
+        if (UpdateRequest.getName() != null) {
             gamelist.setName(UpdateRequest.getName());
             throw new ArithmeticException("Already registered data");
         }
-        Gamelist gamelist = new Gamelist(id,name);
-        gameMapper.update(gamelist);
     }
+
 }

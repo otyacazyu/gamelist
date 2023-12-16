@@ -1,8 +1,7 @@
 package com.example.gamelist;
 
 import Mapper.GameMapper;
-import Request.UpdateRequest;
-import Response.Response;
+import Response.UpdateResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
@@ -28,17 +27,17 @@ public class GameController {
 
 
     @PostMapping("/gamelist")
-    public ResponseEntity<Response> create(@RequestBody GameForm form){
+    public ResponseEntity<GamelistService.Response> create(@RequestBody GameForm form){
         URI url = UriComponentsBuilder.fromUriString("http://localhost:8080")
                 .path("/gamelist/id")
                 .build()
                 .toUri();
-        return ResponseEntity.created(url).body(new Response("name successfully created"));
+        return ResponseEntity.created(url).body(new GamelistService.Response("name successfully created"));
 
     }
     @PatchMapping("/gamelist/{id}")
-    public ResponseEntity<UpdateResponse> UpdateGamelist(@PathVariable int id, @RequestBody UpdateRequest updateRequest){
-         GamelistService.update(id,updateRequest.getName());
+    public ResponseEntity<UpdateResponse> UpdateGamelist(@PathVariable int id, @RequestBody GamelistService.UpdateRequest updateRequest){
+        Gamelists.update(id,updateRequest.getName());
          UpdateResponse updataResponse = new UpdateResponse("Contents have been updated!");
          return ResponseEntity.ok(updataResponse);
 
