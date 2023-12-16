@@ -1,4 +1,4 @@
-package Response;
+package com.example.gamelist;
 
 public class UpdateResponse {
 
