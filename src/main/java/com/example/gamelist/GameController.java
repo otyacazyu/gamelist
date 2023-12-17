@@ -1,6 +1,5 @@
 package com.example.gamelist;
 
-import Mapper.GameMapper;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +24,7 @@ public class GameController {
     }
 
 
+
     @PostMapping("/gamelist")
     public ResponseEntity<GamelistService.Response> create(@RequestBody GameForm form){
         URI url = UriComponentsBuilder.fromUriString("http://localhost:8080")
@@ -32,8 +32,10 @@ public class GameController {
                 .build()
                 .toUri();
         return ResponseEntity.created(url).body(new GamelistService.Response("name successfully created"));
-
     }
+
+
+
     @PatchMapping("/gamelist/{id}")
     public ResponseEntity<UpdateResponse> UpdateGamelist(@PathVariable int id, @RequestBody GamelistService.UpdateRequest updateRequest){
         Gamelists.update(id,updateRequest.getName());
