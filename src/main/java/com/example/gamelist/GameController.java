@@ -31,7 +31,7 @@ public class GameController {
                 .path("/gamelist/id")
                 .build()
                 .toUri();
-        return ResponseEntity.created(url).body(new GamelistService.Response("gamelist successfully created"));
+        return ResponseEntity.created(url).body(new Response("gamelist successfully created"));
     }
 
 
