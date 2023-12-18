@@ -18,7 +18,7 @@ public class GamelistService {
     public <Gamelist> updateGamelist(final Integer id,String name) {
         Gamelist gamelist = gameMapper.findById(id)
                 .orElseThrow(() -> new GameNotFoundException("gamelist information not found"));
-        List<Gamelist> otherGamelist = this.gameMapper/findByName(name);
+        List<Gamelist> otherGamelist = this.gameMapper.findByName(name);
         if (UpdateRequest.getName() != null) {
             gamelist.setName(UpdateRequest.getName());
             throw new ArithmeticException("Already registered data");
