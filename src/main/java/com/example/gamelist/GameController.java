@@ -14,8 +14,11 @@ public class GameController {
 
     private final GameMapper gameMapper;
 
-    public GameController(GameMapper gameMapper) {
+    private final GamelistService gamelistService;
+
+    public GameController(GameMapper gameMapper, GamelistService gamelistService) {
         this.gameMapper = gameMapper;
+        this.gamelistService = gamelistService;
     }
 
     @GetMapping("/gamelist")
