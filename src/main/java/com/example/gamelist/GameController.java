@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 public class GameController {
 
+
     private final GameMapper gameMapper;
 
     private final GamelistService gamelistService;
