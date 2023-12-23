@@ -20,7 +20,7 @@ public class GamelistService {
                 .orElseThrow(() -> new GameNotFoundException("gamelist information not found"));
         List<Gamelist> otherGamelist = this.gameMapper.findByName(name);
 
-        if (UpdateRequest.getName() == getName) {
+        if (otherGamelist.stream().anyMatch(gamelist -> gamelist.getName().equals(getName)) {
             gamelist.setName(UpdateRequest.getName());
             throw new ArithmeticException("Already registered data");
         }
