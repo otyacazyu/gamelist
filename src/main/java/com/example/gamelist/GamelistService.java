@@ -15,16 +15,17 @@ public class GamelistService {
         this.gameMapper = gameMapper;
     }
 
-    public <Gamelist> updateGamelist(final Integer id,String name) {
-        Gamelist gamelist = gameMapper.findById(id)
+     public Game updateGame(final Integer id,String name) {
+        Game game = gameMapper.findById(id)
                 .orElseThrow(() -> new GameNotFoundException("gamelist information not found"));
-        List<Gamelist> otherGamelist = this.gameMapper.findByName(name);
+        List<Game> otherGames = this.gameMapper.findByName(name);
 
-        if (otherGamelist.stream().anyMatch(gamelist -> gamelist.getName().equals(getName)) {
-            gamelist.setName(UpdateRequest.getName());
+        if (otherGames.stream().anyMatch(game -> game.getName().equals(name))) {
+            game.setName(UpdateRequest.getName());
             throw new ArithmeticException("Already registered data");
         }
     }
+}
 
 
 
