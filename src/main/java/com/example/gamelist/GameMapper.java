@@ -20,4 +20,5 @@ public interface GameMapper {
 
     @Update("UPDATE gamelist SET name = {#name} WHERE id = #{id}")
     void updateGamelist(Game game);
+
 }

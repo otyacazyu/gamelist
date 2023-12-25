@@ -2,8 +2,8 @@ package com.example.gamelist;
 
 public class Game {
 
-    private final int id;
-    private final String name;
+    private int id;
+    private String name;
 
     public Game(int id, String name) {
         this.id = id;
@@ -15,7 +15,14 @@ public class Game {
     }
 
     public String getName() {
-        return name;
+        return name;}
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
 
