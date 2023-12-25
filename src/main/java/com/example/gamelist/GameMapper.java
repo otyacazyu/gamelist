@@ -1,8 +1,5 @@
 package com.example.gamelist;
 
-
-
-import com.example.gamelist.Game;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -22,5 +19,5 @@ public interface GameMapper {
     Optional<Game> findById(int id);
 
     @Update("UPDATE gamelist SET name = {#name} WHERE id = #{id}")
-    void updateGamelist(Gamelist gamelist);
+    void updateGamelist(Game game);
 }
