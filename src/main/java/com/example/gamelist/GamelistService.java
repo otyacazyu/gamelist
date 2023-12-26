@@ -4,14 +4,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static com.example.gamelist.GamelistService.UpdateRequest.name;
-
 @Service
-public class GamelistService {
+public class GameService {
 
     private final GameMapper gameMapper;
 
-    public GamelistService(GameMapper gameMapper) {
+    public GameService(GameMapper gameMapper) {
         this.gameMapper = gameMapper;
     }
 
