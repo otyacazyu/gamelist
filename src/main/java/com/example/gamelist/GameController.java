@@ -1,7 +1,5 @@
 package com.example.gamelist;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -42,7 +40,7 @@ public class GameController {
 
     @PatchMapping("/gamelist/{id}")
     public ResponseEntity<UpdateResponse> UpdateGamelist(@PathVariable int id, @RequestBody UpdateRequest updateRequest){
-        gamelistService.updateRequest(id,updateRequest.getName());
+         gamelistService.updateRequest(id, updateRequest.getName());
          UpdateResponse updataResponse = new UpdateResponse("Contents have been updated!");
          return ResponseEntity.ok(updataResponse);
 
