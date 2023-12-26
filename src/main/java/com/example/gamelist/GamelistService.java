@@ -13,7 +13,7 @@ public class GameService {
         this.gameMapper = gameMapper;
     }
 
-     public Game updateGame(final Integer id,String name) {
+    public Game updateGame(final Integer id, String name) {
         Game game = gameMapper.findById(id)
                 .orElseThrow(() -> new GameNotFoundException("gamelist information not found"));
         List<Game> otherGames = this.gameMapper.findByName(name);
@@ -22,9 +22,6 @@ public class GameService {
             game.setName(UpdateRequest.getName());
             throw new ArithmeticException("Already registered data");
         }
+
     }
-}
-
-
-
 }

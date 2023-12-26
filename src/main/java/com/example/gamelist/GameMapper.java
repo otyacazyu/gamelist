@@ -18,7 +18,7 @@ public interface GameMapper {
     @Select("SELECT * FROM gamelists WHERE id = #{id}")
     Optional<Game> findById(int id);
 
-    @Update("UPDATE gamelist SET name = {#name} WHERE id = #{id}")
+    @Update("UPDATE gamelists SET name = {#name} WHERE id = #{id}")
     void updateGamelist(Game game);
 
 }
