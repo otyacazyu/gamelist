@@ -1,5 +1,6 @@
 package com.example.gamelist;
 
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class GameService {
 //
         if (otherGames.stream().anyMatch(game -> game.getName().equals(name))) {
             game.setName(UpdateRequest.getName());
-            throw new ArithmeticException("Already registered data");
+            throw new DuplicateKeyException("Already registered data");
         }
 // 戻す物があるか？？
     }
