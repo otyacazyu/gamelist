@@ -17,11 +17,11 @@ public class GameService {
         Game game = gameMapper.findById(id)
                 .orElseThrow(() -> new GameNotFoundException("gamelist information not found"));
         List<Game> otherGames = this.gameMapper.findByName(name);
-
+//
         if (otherGames.stream().anyMatch(game -> game.getName().equals(name))) {
             game.setName(UpdateRequest.getName());
             throw new ArithmeticException("Already registered data");
         }
-
+// 戻す物があるか？？
     }
 }

@@ -19,6 +19,6 @@ public interface GameMapper {
     Optional<Game> findById(int id);
 
     @Update("UPDATE gamelists SET name = {#name} WHERE id = #{id}")
-    void updateGamelist(Game game);
+    void update(Game game);
 
 }

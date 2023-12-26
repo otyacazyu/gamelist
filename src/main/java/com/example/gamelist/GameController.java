@@ -13,11 +13,11 @@ public class GameController {
 
     private final GameMapper gameMapper;
 
-    private final GamelistService gamelistService;
+    private final GameService gameService;
 
-    public GameController(GameMapper gameMapper, GamelistService gamelistService) {
+    public GameController(GameMapper gameMapper, GameService gameService) {
         this.gameMapper = gameMapper;
-        this.gamelistService = gamelistService;
+        this.gameService = gameService;
     }
 
     @GetMapping("/gamelist")
@@ -39,8 +39,8 @@ public class GameController {
 
 
     @PatchMapping("/gamelist/{id}")
-    public ResponseEntity<UpdateResponse> UpdateGamelist(@PathVariable int id, @RequestBody UpdateRequest updateRequest){
-         gamelistService.updateRequest(id, updateRequest.getName());
+    public ResponseEntity<UpdateResponse> UpdateGame(@PathVariable int id, @RequestBody UpdateRequest updateRequest) {
+        gameService.updateRequest(id, updateRequest.getName());
          UpdateResponse updataResponse = new UpdateResponse("Contents have been updated!");
          return ResponseEntity.ok(updataResponse);
 
