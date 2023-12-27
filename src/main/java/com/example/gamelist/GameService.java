@@ -21,8 +21,9 @@ public class GameService {
 //
         if (otherGames.stream().anyMatch(game -> game.getName().equals(name))) {
             game.setName(UpdateRequest.getName());
+            if (isGameAlreadyRegistered(UpdateRequest.getName())) {
             throw new DuplicateKeyException("Already registered data");
         }
 // 戻す物があるか？？
     }
-}
+
