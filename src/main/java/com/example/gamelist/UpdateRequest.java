@@ -1,7 +1,7 @@
 package com.example.gamelist;
 
 public class UpdateRequest {
-    private  int id;
+    private int id;
 
     private String name;
 

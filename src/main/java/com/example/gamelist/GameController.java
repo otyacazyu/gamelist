@@ -33,7 +33,7 @@ public class GameController {
                 .path("/gamelist/id")
                 .build()
                 .toUri();
-        return ResponseEntity.created(url).body(new Response("gamelist successfully created"));
+        return ResponseEntity.created(url).body(new Response("game successfully created"));
     }
 
 
@@ -41,8 +41,8 @@ public class GameController {
     @PatchMapping("/gamelist/{id}")
     public ResponseEntity<UpdateResponse> UpdateGame(@PathVariable int id, @RequestBody UpdateRequest updateRequest) {
         gameService.updateRequest(id, updateRequest.getName());
-         UpdateResponse updataResponse = new UpdateResponse("Contents have been updated!");
-         return ResponseEntity.ok(updataResponse);
+        UpdateResponse updataResponse = new UpdateResponse("Contents have been updated!");
+        return ResponseEntity.ok(updataResponse);
 
     }
 }
