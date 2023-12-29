@@ -14,15 +14,13 @@ public class GameService {
         this.gameMapper = gameMapper;
     }
 
-    public Game updateGame(final Integer id, String name) {
-        Game game = gameMapper.findById(id)
-                .orElseThrow(() -> new GameNotFoundException("game information not found"));
+    public void updateGame(final Integer id, String name) {
+        Game game = gameMapper.findById(id).orElseThrow(() -> new GameNotFoundException("game information not found"));
         List<Game> otherGames = this.gameMapper.findByName(name);
 
         if (otherGames.stream().anyMatch(game -> game.getName().equals(name))) {
             game.setName(UpdateRequest.getName());
-        } else
-            throw new DuplicateKeyException("Already registered data");
-        }
+        } else throw new DuplicateKeyException("Already registered data");
+    }
 
 }
