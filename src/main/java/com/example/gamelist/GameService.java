@@ -19,8 +19,10 @@ public class GameService {
         List<Game> otherGames = this.gameMapper.findByName(name);
 
         if (otherGames.stream().anyMatch(game -> game.getName().equals(name))) {
-            game.setName(UpdateRequest.getName());
-        } else throw new DuplicateKeyException("Already registered data");
+            game.setName(name);
+        } else {
+            throw new DuplicateKeyException("Already registered data");
+        }
     }
 
 }
