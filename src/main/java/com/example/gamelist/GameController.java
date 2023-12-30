@@ -38,7 +38,7 @@ public class GameController {
 
     @PatchMapping("/gamelist/{id}")
     public ResponseEntity<UpdateResponse> UpdateGame(@PathVariable int id, @RequestBody UpdateRequest updateRequest) {
-        gameService.updateRequest(id, updateRequest.getName());
+        gameService.updateGame(id, updateRequest.getName());
         UpdateResponse updataResponse = new UpdateResponse("Contents have been updated!");
         return ResponseEntity.ok(updataResponse);
 
