@@ -29,7 +29,7 @@ public class GameController {
     public  List<Game> gamelist(){
         return gameMapper.findAll();
     }
-    
+
     @PostMapping("/gamelist")
     public ResponseEntity<Response> create(@RequestBody GameForm form){
         URI url = UriComponentsBuilder.fromUriString("http://localhost:8080")
