@@ -21,4 +21,5 @@ public interface GameMapper {
     @Update("UPDATE gamelists SET name = {#name} WHERE id = #{id}")
     void update(Game game);
 
+    List<Game> findByName(String name);
 }

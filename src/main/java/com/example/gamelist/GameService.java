@@ -18,7 +18,7 @@ public class GameService {
         Game game = gameMapper.findById(id).orElseThrow(() -> new GameNotFoundException("game information not found"));
         List<Game> otherGames = this.gameMapper.findByName(name);
 
-        if (otherGames.stream().anyMatch(game -> game.getName().equals(name))) {
+        if (otherGames.stream().anyMatch(g -> g.getName().equals(name))) {
             game.setName(name);
         } else {
             throw new DuplicateKeyException("Already registered data");
