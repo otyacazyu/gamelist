@@ -20,6 +20,7 @@ public class GameService {
 
         if (otherGames.stream().noneMatch(g -> g.getName().equals(name))) {
             game.setName(name);
+            gameMapper.save(game);
         } else {
             throw new DuplicateKeyException("Already registered data");
         }
