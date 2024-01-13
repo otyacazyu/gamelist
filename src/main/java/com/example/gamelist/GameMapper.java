@@ -23,4 +23,6 @@ public interface GameMapper {
 
     @Select("SELECT * FROM gamelists WHERE name = #{name}")
     List<Game> findByName(String name);
+
+
 }
