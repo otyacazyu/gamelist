@@ -1,6 +1,9 @@
 package com.example.gamelist;
 
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,7 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
+import java.time.ZonedDateTime;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class GameController {
@@ -39,11 +44,25 @@ public class GameController {
         return ResponseEntity.created(url).body(new Response("game successfully created"));
     }
 
+
     @PatchMapping("/gamelist/{id}")
     public ResponseEntity<UpdateResponse> UpdateGame(@PathVariable int id, @RequestBody UpdateRequest updateRequest) {
         gameService.updateGame(id, updateRequest.getName());
         UpdateResponse updataResponse = new UpdateResponse("Contents have been updated!");
         return ResponseEntity.ok(updataResponse);
 
+    }
+
+    @ExceptionHandler(value = GameDuplicateException.class)
+    public ResponseEntity<Map<String, String>> handGameNotFoundException(GameDuplicateException e, HttpServletRequest request) {
+
+        Map<String, String> body = Map.of(
+                "taimestamp", ZonedDateTime.now().toString(),
+                "status", String.valueOf(HttpStatus.CONFLICT.value()),
+                "error", HttpStatus.CONFLICT.getReasonPhrase(),
+                "message", e.getMessage(),
+                "patch", request.getRequestURI());
+
+        return new ResponseEntity<>(body, HttpStatus.CONFLICT);
     }
 }

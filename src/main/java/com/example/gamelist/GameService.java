@@ -1,6 +1,5 @@
 package com.example.gamelist;
 
-import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,7 +21,7 @@ public class GameService {
             game.setName(name);
             gameMapper.save(game);
         } else {
-            throw new DuplicateKeyException("Already registered data");
+            throw new GameDuplicateException("Already registered data");
         }
     }
 
