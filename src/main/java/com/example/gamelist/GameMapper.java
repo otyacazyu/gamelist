@@ -1,5 +1,6 @@
 package com.example.gamelist;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -26,4 +27,7 @@ public interface GameMapper {
 
     @Update("UPDATE gamelists SET name = #{name} WHERE id = #{id}")
     void save(Game game);
+
+    @Delete("SELECT * FROM gamelist HWRE id = #{id}")
+    void deleteById(int id);
 }

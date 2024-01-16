@@ -3,6 +3,7 @@ package com.example.gamelist;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -52,6 +53,12 @@ public class GameController {
         return ResponseEntity.ok(updataResponse);
 
     }
+
+    @DeleteMapping("/gamelist/{id}")
+    public ResponseEntity<String> deleteResourue(@PathVariable Long id) {
+        return new ResponseEntity<>("Resource deleted successfully", HttpStatus.OK);
+    }
+
 
     @ExceptionHandler(value = GameDuplicateException.class)
     public ResponseEntity<Map<String, String>> handGameNotFoundException(GameDuplicateException e, HttpServletRequest request) {
