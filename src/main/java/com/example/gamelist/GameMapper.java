@@ -29,5 +29,6 @@ public interface GameMapper {
     void save(Game game);
 
     @Delete("SELECT * FROM gamelist HWRE id = #{id}")
-    void deleteById(int id);
+    void delete(Game game);
+
 }

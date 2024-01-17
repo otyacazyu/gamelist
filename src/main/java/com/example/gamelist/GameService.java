@@ -10,7 +10,6 @@ public class GameService {
     private final GameMapper gameMapper;
 
     public GameService(GameMapper gameMapper) {
-
         this.gameMapper = gameMapper;
     }
 
@@ -25,9 +24,9 @@ public class GameService {
             throw new GameDuplicateException("Already registered data");
         }
     }
-}
 
-public void deleteGameById(Integer id) {
-    Game game = gameMapper.findById(id).orElseThrow(() -> new GameNotFoundException("Game information not found"));
-    gameMapper.deleteById(id);
+    public void deleteGame(Integer id) {
+        Game game = gameMapper.findById(id).orElseThrow(() -> new GameNotFoundException("The game of conditions does not exist."));
+        gameMapper.delete(game);
+    }
 }
