@@ -25,4 +25,8 @@ public class GameService {
         }
     }
 
+    public void deleteGame(Integer id) {
+        Game game = gameMapper.findById(id).orElseThrow(() -> new GameNotFoundException("The game of conditions does not exist."));
+        gameMapper.delete(game);
+    }
 }
