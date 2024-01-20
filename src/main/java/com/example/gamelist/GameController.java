@@ -1,6 +1,7 @@
 package com.example.gamelist;
 
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,6 +27,7 @@ public class GameController {
 
     private final GameService gameService;
 
+    @Autowired
     public GameController(GameMapper gameMapper, GameService gameService) {
         this.gameMapper = gameMapper;
         this.gameService = gameService;
@@ -38,6 +40,7 @@ public class GameController {
 
     @PostMapping("/gamelist")
     public ResponseEntity<Response> create(@RequestBody GameForm form){
+        gameService.createGame(String.valueOf(form));
         URI url = UriComponentsBuilder.fromUriString("http://localhost:8080")
                 .path("/gamelist/id")
                 .build()

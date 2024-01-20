@@ -3,6 +3,7 @@ package com.example.gamelist;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class GameService {
@@ -10,7 +11,22 @@ public class GameService {
     private final GameMapper gameMapper;
 
     public GameService(GameMapper gameMapper) {
+
         this.gameMapper = gameMapper;
+    }
+
+    public void createGame(String name) {
+        List<Game> exisingGames = gameMapper.findByName(name);
+        if (exisingGames.isEmpty()) {
+            Game newGame = new Game(generateUniqueId(), name);
+            gameMapper.save(newGame);
+        } else {
+            throw new GameDuplicateException("Already registered data");
+        }
+    }
+
+    private int generateUniqueId() {
+        return new Random().nextInt(1000);
     }
 
     public void updateGame(final Integer id, String name) {
