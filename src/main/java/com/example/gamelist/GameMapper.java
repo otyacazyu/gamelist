@@ -1,9 +1,12 @@
 package com.example.gamelist;
 
 import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -27,8 +30,11 @@ public interface GameMapper {
 
     @Update("UPDATE gamelists SET name = #{name} WHERE id = #{id}")
     void save(Game game);
-
     @Delete("SELECT * FROM gamelist HWRE id = #{id}")
     void delete(Game game);
 
+    @Transactional
+    @Insert("INSERT INTO gamelists (name) VALUES (#{name})")
+    @Options(useGeneratedKeys = true, keyProperty = "id")
+    void insert(Game game);
 }

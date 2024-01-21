@@ -40,7 +40,7 @@ public class GameController {
 
     @PostMapping("/gamelist")
     public ResponseEntity<Response> create(@RequestBody GameForm form){
-        gameService.createGame(String.valueOf(form));
+        gameService.createGame(form.getName());
         URI url = UriComponentsBuilder.fromUriString("http://localhost:8080")
                 .path("/gamelist/id")
                 .build()
