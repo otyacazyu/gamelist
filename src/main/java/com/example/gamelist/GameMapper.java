@@ -22,7 +22,7 @@ public interface GameMapper {
     @Select("SELECT * FROM gamelists WHERE id = #{id}")
     Optional<Game> findById(int id);
 
-    @Update("UPDATE gamelists SET name = {#name} WHERE id = #{id}")
+    @Update("UPDATE gamelists SET name = #{name} WHERE id = #{id}")
     void update(Game game);
 
     @Select("SELECT * FROM gamelists WHERE name = #{name}")
@@ -36,5 +36,6 @@ public interface GameMapper {
     @Transactional
     @Insert("INSERT INTO gamelists (name) VALUES (#{name})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
-    void insert(Game game);
+    void seve(Game game);
+
 }

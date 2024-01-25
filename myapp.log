@@ -1,0 +1,97 @@
+2024-01-24 09:59:56 [main] INFO  c.e.gamelist.GamelistApplication - Starting GamelistApplication using Java 17.0.8 with PID 29748 (/Users/otyakai/projects/REST API/gamelist/build/classes/java/main started by otyakai in /Users/otyakai/projects/REST API/gamelist)
+2024-01-24 09:59:56 [main] INFO  c.e.gamelist.GamelistApplication - No active profile set, falling back to 1 default profile: "default"
+2024-01-24 09:59:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-24 09:59:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-24 09:59:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-24 09:59:58 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-24 09:59:58 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2430 ms
+2024-01-24 09:59:59 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-24 09:59:59 [main] INFO  c.e.gamelist.GamelistApplication - Started GamelistApplication in 4.595 seconds (process running for 5.536)
+2024-01-24 10:00:07 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-24 10:00:07 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-24 10:00:07 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-01-24 10:00:08 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-24 10:00:09 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76f5ed30
+2024-01-24 10:00:09 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-24 10:01:44 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-24 10:01:44 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-24 10:02:11 [main] INFO  c.e.gamelist.GamelistApplication - Starting GamelistApplication using Java 17.0.8 with PID 29805 (/Users/otyakai/projects/REST API/gamelist/build/classes/java/main started by otyakai in /Users/otyakai/projects/REST API/gamelist)
+2024-01-24 10:02:11 [main] INFO  c.e.gamelist.GamelistApplication - No active profile set, falling back to 1 default profile: "default"
+2024-01-24 10:02:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-24 10:02:14 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-24 10:02:14 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-24 10:02:14 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-24 10:02:14 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2919 ms
+2024-01-24 10:02:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-24 10:02:16 [main] INFO  c.e.gamelist.GamelistApplication - Started GamelistApplication in 6.895 seconds (process running for 9.503)
+2024-01-24 10:02:20 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-24 10:02:20 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-24 10:02:20 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-01-24 10:06:27 [main] INFO  c.e.gamelist.GamelistApplication - Starting GamelistApplication using Java 17.0.8 with PID 29878 (/Users/otyakai/projects/REST API/gamelist/build/classes/java/main started by otyakai in /Users/otyakai/projects/REST API/gamelist)
+2024-01-24 10:06:27 [main] INFO  c.e.gamelist.GamelistApplication - No active profile set, falling back to 1 default profile: "default"
+2024-01-24 10:06:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-24 10:06:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-24 10:06:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-24 10:06:30 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-24 10:06:30 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2087 ms
+2024-01-24 10:06:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-24 10:06:30 [main] INFO  c.e.gamelist.GamelistApplication - Started GamelistApplication in 3.941 seconds (process running for 4.893)
+2024-01-24 10:06:36 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-24 10:06:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-24 10:06:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-01-24 10:06:36 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-24 10:06:37 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ca72790
+2024-01-24 10:06:37 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-24 10:08:07 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-24 10:08:07 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-24 10:08:17 [main] INFO  c.e.gamelist.GamelistApplication - Starting GamelistApplication using Java 17.0.8 with PID 29919 (/Users/otyakai/projects/REST API/gamelist/build/classes/java/main started by otyakai in /Users/otyakai/projects/REST API/gamelist)
+2024-01-24 10:08:17 [main] INFO  c.e.gamelist.GamelistApplication - No active profile set, falling back to 1 default profile: "default"
+2024-01-24 10:08:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-24 10:08:19 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-24 10:08:19 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-24 10:08:20 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-24 10:08:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2069 ms
+2024-01-24 10:08:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-24 10:08:20 [main] INFO  c.e.gamelist.GamelistApplication - Started GamelistApplication in 3.908 seconds (process running for 4.774)
+2024-01-24 10:08:31 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-24 10:08:31 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-24 10:08:31 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-01-24 10:08:32 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-24 10:08:33 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e1c8914
+2024-01-24 10:08:33 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-24 10:11:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-24 10:11:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-24 10:11:38 [main] INFO  c.e.gamelist.GamelistApplication - Starting GamelistApplication using Java 17.0.8 with PID 30003 (/Users/otyakai/projects/REST API/gamelist/build/classes/java/main started by otyakai in /Users/otyakai/projects/REST API/gamelist)
+2024-01-24 10:11:38 [main] INFO  c.e.gamelist.GamelistApplication - No active profile set, falling back to 1 default profile: "default"
+2024-01-24 10:11:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-24 10:11:40 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-24 10:11:40 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-24 10:11:40 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-24 10:11:40 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2118 ms
+2024-01-24 10:11:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-24 10:11:41 [main] INFO  c.e.gamelist.GamelistApplication - Started GamelistApplication in 4.129 seconds (process running for 5.16)
+2024-01-24 10:11:47 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-24 10:11:47 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-24 10:11:47 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-01-24 10:11:48 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-24 10:11:48 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d5f36f4
+2024-01-24 10:11:48 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-24 10:12:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-24 10:12:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-24 10:13:09 [main] INFO  c.e.gamelist.GamelistApplication - Starting GamelistApplication using Java 17.0.8 with PID 30058 (/Users/otyakai/projects/REST API/gamelist/build/classes/java/main started by otyakai in /Users/otyakai/projects/REST API/gamelist)
+2024-01-24 10:13:09 [main] INFO  c.e.gamelist.GamelistApplication - No active profile set, falling back to 1 default profile: "default"
+2024-01-24 10:13:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-24 10:13:11 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-24 10:13:11 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-24 10:13:11 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-24 10:13:11 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2137 ms
+2024-01-24 10:13:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-24 10:13:12 [main] INFO  c.e.gamelist.GamelistApplication - Started GamelistApplication in 3.984 seconds (process running for 5.199)
+2024-01-24 10:13:21 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-24 10:13:21 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-24 10:13:21 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2024-01-24 10:13:22 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-24 10:13:22 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2955174c
+2024-01-24 10:13:22 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-24 10:20:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-24 10:20:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

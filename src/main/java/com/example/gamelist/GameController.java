@@ -47,8 +47,7 @@ public class GameController {
                 .toUri();
         return ResponseEntity.created(url).body(new Response("game successfully created"));
     }
-
-
+    
     @PatchMapping("/gamelist/{id}")
     public ResponseEntity<UpdateResponse> UpdateGame(@PathVariable int id, @RequestBody UpdateRequest updateRequest) {
         gameService.updateGame(id, updateRequest.getName());
