@@ -19,7 +19,8 @@ public class GameService {
         List<Game> existingGames = gameMapper.findByName(name);
         if (existingGames.isEmpty()) {
             Game newGame = new Game(generateUniqueId(), name);
-            gameMapper.save(newGame);
+            gameMapper.insert(newGame);
+            gameMapper.update(newGame);
         } else {
             throw new GameDuplicateException("Already registered data");
         }
