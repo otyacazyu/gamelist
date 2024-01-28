@@ -31,9 +31,9 @@ public interface GameMapper {
     void save(Game game);
     @Delete("SELECT * FROM gamelist HWRE id = #{id}")
     void delete(Game game);
-    
+
     @Insert("INSERT INTO gamelists (name) VALUES (#{name})")
-    @Options(useGeneratedKeys = true, keyColumn = "id", keyProperty = "id")
+    @Options(useGeneratedKeys = true, keyProperty = "id")
     void insert(Game game);
 
 }
