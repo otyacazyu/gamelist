@@ -5,7 +5,7 @@ public class Game {
     private int id;
     private String name;
 
-    public Game(int id, String name) {
+    public Game(String name) {
         this.id = id;
         this.name = name;
     }

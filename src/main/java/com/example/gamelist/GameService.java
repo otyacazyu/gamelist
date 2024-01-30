@@ -3,7 +3,6 @@ package com.example.gamelist;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Random;
 
 @Service
 public class GameService {
@@ -18,7 +17,7 @@ public class GameService {
     public void createGame(String name) {
         List<Game> existingGames = gameMapper.findByName(name);
         if (existingGames.isEmpty()) {
-            Game newGame = new Game(generateUniqueId(), name);
+            Game newGame = new Game(name);
             gameMapper.insert(newGame);
             gameMapper.update(newGame);
         } else {
@@ -26,9 +25,8 @@ public class GameService {
         }
     }
 
-    private int generateUniqueId() {
-        return new Random().nextInt(1000);
-    }
+
+}
 
     public void updateGame(final Integer id, String name) {
         Game game = gameMapper.findById(id).orElseThrow(() -> new GameNotFoundException("game information not found"));
