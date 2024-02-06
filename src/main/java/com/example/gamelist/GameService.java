@@ -26,8 +26,6 @@ public class GameService {
     }
 
 
-}
-
     public void updateGame(final Integer id, String name) {
         Game game = gameMapper.findById(id).orElseThrow(() -> new GameNotFoundException("game information not found"));
         List<Game> otherGames = this.gameMapper.findByName(name);
