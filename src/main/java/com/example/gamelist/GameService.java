@@ -10,8 +10,21 @@ public class GameService {
     private final GameMapper gameMapper;
 
     public GameService(GameMapper gameMapper) {
+
         this.gameMapper = gameMapper;
     }
+
+    public void createGame(String name) {
+        List<Game> existingGames = gameMapper.findByName(name);
+        if (existingGames.isEmpty()) {
+            Game newGame = new Game(name);
+            gameMapper.insert(newGame);
+            gameMapper.update(newGame);
+        } else {
+            throw new GameDuplicateException("Already registered data");
+        }
+    }
+
 
     public void updateGame(final Integer id, String name) {
         Game game = gameMapper.findById(id).orElseThrow(() -> new GameNotFoundException("game information not found"));
